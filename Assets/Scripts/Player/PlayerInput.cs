@@ -5,16 +5,29 @@ public class PlayerInput : MonoBehaviour
 {
     public Vector2 look { get; private set; }
     public Vector2 move { get; private set; }
+    public float jump { get; private set; }
+    public int crouch { get; private set; }
+    public int attack { get; private set; }
+    public int interact { get; private set; }
 
     public void OnLook(InputValue inputValue)
     {
-        Vector2 lookInput = inputValue.Get<Vector2>();
-        look = lookInput;
+        look = inputValue.Get<Vector2>();
     }
 
     public void OnMove(InputValue inputValue)
     {
-        Vector2 moveInput = inputValue.Get<Vector2>();
-        move = moveInput;
+        move = inputValue.Get<Vector2>();
+    }
+
+    public void OnJump(InputValue inputValue)
+    {
+        jump = inputValue.Get<float>();
+        SendMessage("Jump");
+    }
+
+    void Update()
+    {
+        // Debug.Log(jump);
     }
 }
