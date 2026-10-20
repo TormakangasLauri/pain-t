@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1fcb97ca88756448ebe0fb0a915130, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerValues
-  maxSpeed: 50
+  maxSpeed: 20
   minSpeed: 0
   acceleration: 10
   deceleration: 25
-  turnSpeed: 20
+  turnSpeed: 5
   jumpForce: 10
   jumpForwardForce: 0
   walljumpUpForce: 0
   walljumpForwardForce: 0
   walljumpAwayForce: 0
-  x: 0
+  mouseSensitivity: 0.1
+  currentSpeed: 0
+  currentMovement: {x: 0.000015939751, y: -1e-45, z: 0.000054464082}

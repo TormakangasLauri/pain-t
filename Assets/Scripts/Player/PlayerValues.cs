@@ -24,6 +24,10 @@ public class PlayerValues : ScriptableObject
     [Tooltip("Extra force away from the wall")]
     public float walljumpAwayForce;
 
-    [Header("Other")]
-    public float x;
+    [Header("Camera")]
+    public float mouseSensitivity;
+
+    // Non-static values
+    [HideInInspector] public float currentSpeed;
+    [HideInInspector] public Vector3 currentMovement;
 }

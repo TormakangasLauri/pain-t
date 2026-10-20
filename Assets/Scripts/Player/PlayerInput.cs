@@ -18,6 +18,7 @@ public class PlayerInput : MonoBehaviour
     public void OnMove(InputValue inputValue)
     {
         move = inputValue.Get<Vector2>();
+        Debug.Log(move);
     }
 
     public void OnJump(InputValue inputValue)
