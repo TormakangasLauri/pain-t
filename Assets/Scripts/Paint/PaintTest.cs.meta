@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 580119cf57fff484ea45a19feb1040ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - paintMask: {fileID: 8400000, guid: dbf7236eec31c5a409533e19d7e485ec, type: 2}
+  - brush: {fileID: 2800000, guid: 9ac2324490fa3cf45958997adc9869b6, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
