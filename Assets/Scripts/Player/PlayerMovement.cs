@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
@@ -45,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        // Jumping
+        StartCoroutine(WaitForJumping());
+    }
+
+    IEnumerator WaitForJumping()
+    {
+        yield return null;
     }
 }
