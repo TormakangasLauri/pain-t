@@ -29,5 +29,5 @@ public class PlayerValues : ScriptableObject
 
     // Non-static values
     [HideInInspector] public float currentSpeed;
-    [HideInInspector] public Vector3 currentMovement;
+    [HideInInspector] public Vector3 currentMoveDirection;
 }
