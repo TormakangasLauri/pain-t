@@ -26,10 +26,18 @@ public class PlayerCamera : MonoBehaviour
 
         // Rotate camera
         float diff = -mouseInput.y * values.mouseSensitivity;
-        float newAngle = transform.rotation.x + diff;
-        // Clamp if needed
-        if (clampRotation) Mathf.Clamp(newAngle, lowerAngleLimit, -upperAngleLimit);
-        // Rotation itself
-        transform.rotation = Quaternion.Euler(newAngle, transform.rotation.y, transform.rotation.z);
+        float currentAngle = transform.localRotation.x;
+
+        float newAngle = currentAngle + diff;
+        if (clampRotation)
+        {
+            newAngle = Mathf.Clamp(newAngle, -upperAngleLimit, lowerAngleLimit);
+        }
+
+        // Vector3 cameraRotation = transform.localEulerAngles;
+        // cameraRotation.x = 180;
+        // transform.localEulerAngles = cameraRotation;
+
+        transform.localRotation = Quaternion.Euler(newAngle, 0, 0);
     }
 }
